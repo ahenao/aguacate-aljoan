@@ -6,5 +6,5 @@ Organizacion de equipo
 4. Andres es el que hace los merge a main
 5. Las tareas estan en el backlog, se asignan a uno y se ponen en in progress una vez que se comienza con ellas
 6. Se deben hacer commits de todos los push
-7. Una jupyter por tarea/issue
+7. Un jupyter por tarea/issue
 8. 
