@@ -1,1 +1,2 @@
 1. Columna "Total Bags" es combinacion de {"Small Bags"+"Large Bags"+"XLarge Bags"}
+2. Regions las regiones California, GreatLakes, Midsouth, Northeast	Plains, SouthCentral	Southeast, West componen la region Total US. EL PROBLEMA ES QUE LA SUMATORIA DE LAS QUE QUEDAN NO SUMA EXACATAMENTE EL VALOR DE TOTAL US. PROPORNGO QUITAR ESTAS REGIONES Y ASUMIR EL NUMERO MENOR DEL TOTAL
