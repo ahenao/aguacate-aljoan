@@ -1,0 +1,1 @@
+1. Columna "Total Bags" es combinacion de {"Small Bags"+"Large Bags"+"XLarge Bags"}
