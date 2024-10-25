@@ -1,3 +1,6 @@
+# aguacate-aljoan
+Mini Proyecto UOC_1
+
 Organizacion de equipo
 
 1. Siempre se trabaja en su propia rama
@@ -8,3 +11,4 @@ Organizacion de equipo
 6. Se deben hacer commits de todos los push
 7. Un jupyter por tarea/issue
 8. 
+
