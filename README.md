@@ -12,3 +12,14 @@ Organizacion de equipo
 7. Un jupyter por tarea/issue
 8. 
 
+## utils
+
+Función en data.py: obtener_nuevo_avocado() devuelve el nuevo dataframe con la clasificación de regiones, agrupaciones y ciudades
+
+Para usar los módulos de utils en scripts se hace from utils.data import *
+y para usarlos desde jupyter notebook, hay que agregar el path:
+
+import sys, os
+sys.path.append('../../../aguacate-aljoan/')  # Adjust to the path where utils is located
+from utils.data import obtener_nuevo_avocado
+
