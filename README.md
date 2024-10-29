@@ -26,4 +26,6 @@ y para usarlos desde jupyter notebook, hay que agregar el path:
 import sys, os
 sys.path.append('../../../aguacate-aljoan/')  # Adjust to the path where utils is located
 from utils.data import obtener_nuevo_avocado
+
+nuevo__df = obtener_nuevo_avocado()
 ```
