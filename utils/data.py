@@ -118,3 +118,49 @@ def obtener_nuevo_avocado()-> pd.DataFrame:
 
     nuevo_avocado_df = map_regions(dataset_avocado_original_df, region_classification, guardar=False)
     return nuevo_avocado_df
+
+def imputar_fechas()-> pd.DataFrame:
+    """
+    Función que imouta por promedio las tres entradas faltantes en el avocado.csv original
+
+    regresa:
+    - pd.DataFrame: con las tres fechas para el type organic en WestTexNewMexico
+    """
+
+    df = obtener_nuevo_avocado()
+    df['Date'] = pd.to_datetime(df['Date'])
+    # Fechas y parámetros específicos para imputación
+    missing_dates = ['2015-12-06', '2017-06-18', '2017-06-25']
+    region = 'WestTexNewMexico'
+    avocado_type = 'organic'
+
+    # Iterar sobre las fechas faltantes para imputar valores
+    for date in missing_dates:
+        # Convertir la fecha a datetime
+        date = pd.to_datetime(date)
+
+        # Filtrar las filas previas y posteriores a la fecha faltante
+        prev_row = df[(df['Date'] < date) &
+                      (df['region'] == region) &
+                      (df['type'] == avocado_type)].sort_values(by='Date').iloc[-1]
+        next_row = df[(df['Date'] > date) &
+                      (df['region'] == region) &
+                      (df['type'] == avocado_type)].sort_values(by='Date').iloc[0]
+
+        # Calcular el promedio de los valores numéricos entre las dos fechas
+        imputed_values = prev_row.copy()
+        for col in df.select_dtypes(include='number').columns:
+            imputed_values[col] = (prev_row[col] + next_row[col]) / 2
+
+        # Asignar la fecha, región y tipo específico a la fila imputada
+        imputed_values['Date'] = date
+        imputed_values['region'] = region
+        imputed_values['type'] = avocado_type
+
+        # Añadir la fila imputada al DataFrame
+        df = pd.concat([df, pd.DataFrame([imputed_values])], ignore_index=True)
+
+        # Ordenar el DataFrame por fecha para mantener el orden cronológico
+        df = df.sort_values(by='Date').reset_index(drop=True)
+
+        return df
