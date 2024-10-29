@@ -8,9 +8,9 @@ Organizacion de equipo
 3. En github se verifica en la rama que este bien y se hace merge a la rama dev
 4. Andres es el que hace los merge a main
 5. Las tareas estan en el backlog, se asignan a uno y se ponen en in progress una vez que se comienza con ellas
-6. Se deben hacer commits de todos los push
+6. Hacer commit con frecuencia de cambios, y push al menos una vez al día, o al terminar una tarea
 7. Un jupyter por tarea/issue
-8. 
+8. Reuniones diarias para verificar avances y problemas
 
 ## utils
 
