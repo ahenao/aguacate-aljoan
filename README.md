@@ -31,4 +31,6 @@ nuevo__df = obtener_nuevo_avocado()
 ```
 ## Predicción mensual
 
+Hemos usado una libreria opensource: [Nixtla/statsforecast](https://github.com/Nixtla/statsforecast)
+
 ![Alt text](figures/531.png)
