@@ -40,9 +40,11 @@ La línea azul (y) representa los datos reales. realizamos un entrenamiento del 
 
 También realizamos predicciones mensuales para TotalUS (una sola serie temporal, en lugar de 8 en el caso de regiones agrupadas). La siguiente tabla resume el MAPE (Error Absoluto Medio Porcentual):
 
-| Error MAPE| Valor [%] | Column 3 |
-|----------|----------|----------|
+| Error MAPE| Valor [%] | 
+|----------|----------|
 | Orgánico por regiones     | 22.00 | 
 | Convencional por regiones | 21.31 | 
 | Orgánico TotalUS          | 22.35 | 
 | Convencional TotalUS      | 21.77 | 
+
+Lo que pudimos observar es que no hay gran diferencia para un modelo de regiones y otro de TotalUS respecto al error. Lo segundo, es que la precisión del modelo ARIMA para las predicciones hechas ronda el 20%. Aún hay márgen de mejora para las predicciones (Por ejemplo probar otros modelos de regresión, o incluir variables exógenas)
