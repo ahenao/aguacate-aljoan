@@ -29,3 +29,6 @@ from utils.data import obtener_nuevo_avocado
 
 nuevo__df = obtener_nuevo_avocado()
 ```
+## Predicción mensual
+
+![Alt text](figures/531.png)
