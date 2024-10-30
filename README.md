@@ -40,8 +40,9 @@ La línea azul (y) representa los datos reales. realizamos un entrenamiento del 
 
 También realizamos predicciones mensuales para TotalUS (una sola serie temporal, en lugar de 8 en el caso de regiones agrupadas). La siguiente tabla resume el MAPE (Error Absoluto Medio Porcentual):
 
-| Column 1 | Column 2 | Column 3 |
+| Error MAPE| Valor [%] | Column 3 |
 |----------|----------|----------|
-| Row 1    | Cell 2   | Cell 3   |
-| Row 2    | Cell 5   | Cell 6   |
-| Row 3    | Cell 8   | Cell 9   |
+| Orgánico por regiones     | 22.00 | 
+| Convencional por regiones | 21.31 | 
+| Orgánico TotalUS          | 22.35 | 
+| Convencional TotalUS      | 21.77 | 
