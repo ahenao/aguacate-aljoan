@@ -1,13 +1,12 @@
 """
 Nombre del archivo: data.py
-Autor: Jose Niguidula, Alejandro
+Autor: Jose Niguidula, Alejandro, Andres
 Descripción: Archivo que contiene código útil para tranformar datos para
             proyecto de curso Data Scientist de la UOC
 Creado: 28/10/2024
 Versión: 1.0
-Correos: ahenaoa@uoc.edu, amanzano2@uoc.edu, jniguidulae@uoc.edu
+Correos: ahenaoa@uoc.edu, amanzano2@uoc.edu, jniguidulae@uoc.edu.
 """
-from hashlib import algorithms_guaranteed
 
 #importes de librerías externas
 import pandas as pd
@@ -15,6 +14,7 @@ import os
 
 #importe de codigo interno del proyecto
 #...
+#from utils.data import obtener_nuevo_avocado
 
 #cargar datos
 current_path = os.getcwd()
