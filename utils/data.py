@@ -5,7 +5,7 @@ Descripción: Archivo que contiene código útil para tranformar datos para
             proyecto de curso Data Scientist de la UOC
 Creado: 28/10/2024
 Versión: 1.0
-Correos: ahenaoa@uoc.edu, amanzano2@uoc.edu, jniguidulae@uoc.edu
+Correos: ahenaoa@uoc.edu, amanzano2@uoc.edu, jniguidulae@uoc.edu.
 """
 
 #importes de librerías externas
