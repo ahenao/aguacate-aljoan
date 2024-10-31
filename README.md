@@ -53,6 +53,6 @@ Lo que pudimos observar es que no hay gran diferencia para un modelo de regiones
 
 En una predicción de series temporales pueden usarse variables exógenas como el clima, indicadores económicos, o eventos externos para ayudar a identificar tendencias de la variable a predecir. A continuación haremos un test en nuestras prediciones de la variable **Total_Volume**, esta vez usaremos la variable **AveragePrice** como variable exógena. Haremos predicciones de 15 meses a partir de 2017.02 (lo que incluye una región problemática por la variación de producción de aguacates por causas climáticas y otras varias). Este es un ejercicio teórico, ya que las variables exógenas también deben estar disponibles como predicción a futuro. Sería difícil predecir el precio del aguacate. Sin embargo, el precio si que podría estar ligado a su vez a otras variables exógenas típicas como lo son el clima, los indicadores económicos, etc (que tipicamente pueden encontrarse predicciones acertadas a cortos tiempos, por ejemplo ventana de semanas o máx. tres meses).
 
-![Alt text](figures/531_sinE.png "Predicción sin variable exógena")
+![Alt text](figures/531_sinE.png)
 
-![Alt text](figures/531_conE.png "Predicción con variable exógena")
+![Alt text](figures/531_conE.png)
