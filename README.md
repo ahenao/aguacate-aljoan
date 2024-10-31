@@ -32,7 +32,7 @@ nuevo__df = obtener_nuevo_avocado()
 ## Predicción mensual
 
 Hemos usado una libreria opensource: [Nixtla/statsforecast](https://github.com/Nixtla/statsforecast) para realizar predicciones mensuales del dataset avocado.csv. 
-Haciendo uso del modelo ARIMA (AutoRegressive Integrating MovingAverages) para predecir la variable Total_Volume para diferentes series agrupadas por tipo de aguacate (orgánico/convencional) y para regiones agrupadas:
+Haciendo uso del modelo ARIMA (AutoRegressive Integrating MovingAverages) para predecir la variable **Total_Volume** para diferentes series agrupadas por tipo de aguacate (orgánico/convencional) y para regiones agrupadas:
 
 ![Alt text](figures/531.png)
 
@@ -48,3 +48,11 @@ También realizamos predicciones mensuales para TotalUS (una sola serie temporal
 | Convencional TotalUS      | 21.77 | 
 
 Lo que pudimos observar es que no hay gran diferencia para un modelo de regiones y otro de TotalUS respecto al error. Lo segundo, es que la precisión del modelo ARIMA para las predicciones hechas ronda el 20%. Aún hay márgen de mejora para las predicciones (Por ejemplo probar otros modelos de regresión, o incluir variables exógenas)
+
+### Test con variable Exógena
+
+En una predicción de series temporales pueden usarse variables exógenas como el clima, indicadores económicos, o eventos externos para ayudar a identificar tendencias de la variable a predecir. A continuación haremos un test en nuestras prediciones de la variable **Total_Volume**, esta vez usaremos la variable **AveragePrice** como variable exógena. Haremos predicciones de 15 meses a partir de 2017.02 (lo que incluye una región problemática por la variación de producción de aguacates por causas climáticas y otras varias). Este es un ejercicio teórico, ya que las variables exógenas también deben estar disponibles como predicción a futuro. Sería difícil predecir el precio del aguacate. Sin embargo, el precio si que podría estar ligado a su vez a otras variables exógenas típicas como lo son el clima, los indicadores económicos, etc (que tipicamente pueden encontrarse predicciones acertadas a cortos tiempos, por ejemplo ventana de semanas o máx. tres meses).
+
+![Alt text](figures/531_sinE.png "Predicción sin variable exógena")
+
+![Alt text](figures/531_conE.png "Predicción con variable exógena")
