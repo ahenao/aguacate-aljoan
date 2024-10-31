@@ -57,3 +57,12 @@ En una predicción de series temporales pueden usarse variables exógenas como e
 
 ### Predicción con variable exógena:
 ![Alt text](figures/531-conE.png)
+
+Las diferencias gráficas son sutiles, pero se onbservan algunas predicciones más cercanas a los valores reales. En la siguiente tabla se hace evidente la mejora en la predicción del modelo, sobre todo para el aguacate convencional.
+
+| Error MAPE| Valor [%] | 
+|----------|----------|
+| Orgánico sin exógena     | 16.02 | 
+| Convencional sin exógena | 33.07 | 
+| Orgánico con exógena         | 14.75 | 
+| Convencional con exógena      | 16.70 | 
