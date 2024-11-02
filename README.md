@@ -29,3 +29,22 @@ from utils.data import obtener_nuevo_avocado
 
 nuevo__df = obtener_nuevo_avocado()
 ```
+## Predicción mensual
+
+Hemos usado una libreria opensource: [Nixtla/statsforecast](https://github.com/Nixtla/statsforecast) para realizar predicciones mensuales del dataset avocado.csv. 
+Haciendo uso del modelo ARIMA (AutoRegressive Integrating MovingAverages) para predecir la variable Total_Volume para diferentes series agrupadas por tipo de aguacate (orgánico/convencional) y para regiones agrupadas:
+
+![Alt text](figures/531.png)
+
+La línea azul (y) representa los datos reales. realizamos un entrenamiento del modelo con datos del 2015.01 hasta 2017.07, y se realizaron predicciones desde 2017.08 hasta 2018.03 (para los cuales tenemos datos). Las predicciones junto a un intervalo de confianza del 90% se muestran en rosa. En algunos casos, las predicciones capturan las fluctuaciones (ver California), mientras en otros casos, sólo captura un rango de valores (que dentro del intervalo de confianza son acertados) sin más detalle en fluctuaciones inter-mensuales (ver SouthCentral). 
+
+También realizamos predicciones mensuales para TotalUS (una sola serie temporal, en lugar de 8 en el caso de regiones agrupadas). La siguiente tabla resume el MAPE (Error Absoluto Medio Porcentual):
+
+| Error MAPE| Valor [%] | 
+|----------|----------|
+| Orgánico por regiones     | 22.00 | 
+| Convencional por regiones | 21.31 | 
+| Orgánico TotalUS          | 22.35 | 
+| Convencional TotalUS      | 21.77 | 
+
+Lo que pudimos observar es que no hay gran diferencia para un modelo de regiones y otro de TotalUS respecto al error. Lo segundo, es que la precisión del modelo ARIMA para las predicciones hechas ronda el 20%. Aún hay márgen de mejora para las predicciones (Por ejemplo probar otros modelos de regresión, o incluir variables exógenas)
