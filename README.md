@@ -12,7 +12,7 @@ Organizacion de equipo
 7. Un jupyter por tarea/issue
 8. Reuniones diarias para verificar avances y problemas
 
-##Analisis de los datos csv
+## Analisis de los datos csv
 
 La información incluye los codigos de clasificación de aguacates usando codigos PLU (codigo de búsqueda de precio en íngles).
 
