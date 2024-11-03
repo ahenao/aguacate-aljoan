@@ -60,6 +60,7 @@ El *avocado.csv* que estamos analizando solo incluye los codigos PLU Hass para a
 
 Se puede observar en las columnas de datos:
 |Date|AveragePrice|Total Volume|4046|4225|4770|Total Bags|Small Bags|Large Bags|XLarge Bags|type|year|region|region_type|
+|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
 |2015-1-04|1.33|9213.49|3737.52|4327.52|0.00|1158.45|1158.45|0.00|0.0|organic|20150|year|Sacramento|City|
 |....|....|....|....|....|....|....|....|....|....|....|....|....|....|....|
 
@@ -87,13 +88,17 @@ Transición de cosechas: Hubo un período de transición entre la cosecha anteri
 Dependencia de México: México es el mayor productor de aguacates del mundo, y cualquier interrupción en su suministro, ya sea por razones climáticas, huelgas o problemas logísticos, afecta significativamente el mercado global.
 
 Estos factores combinados llevaron a una gran volatilidad en los precios del aguacate durante 2017, lo que se reflejó en los datos de ventas utilizados.
+
 ## Analisi de Series
 
-![Alt text](figures/ElasticidadcompOrgvsConv-GreaterRegion.png)
+En el gráfico abajo, se puede observar el incremento del precio del aguacate durante el periodo 2017.
+
+![Alt text](figures/promediaAvgPriceporregion.png)
 
 ## Elasticidad
 
-![Alt text](figures/promediaAvgPriceporregion.png)
+Sin embargo, la elasticidad volumen contra precio muestra aguacates organicos, el precio tienen menos afectación a la demanda comparado con los convencionales <=1.5  y > 1.5
+![Alt text](figures/ElasticidadcompOrgvsConv-GreaterRegion.png)
 
 ## Predicción mensual
 
