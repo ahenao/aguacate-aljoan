@@ -89,7 +89,7 @@ Dependencia de México: México es el mayor productor de aguacates del mundo, y 
 
 Estos factores combinados llevaron a una gran volatilidad en los precios del aguacate durante 2017, lo que se reflejó en los datos de ventas utilizados.
 
-## Analisi de Series
+## Análisis de Series
 
 En el gráfico abajo, se puede observar el incremento del precio del aguacate durante el periodo 2017.
 
