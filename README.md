@@ -40,18 +40,6 @@ from utils.data import obtener_nuevo_avocado
 
 nuevo__df = obtener_nuevo_avocado()
 ```
-## Entorno de control de versiones y colaboración
-
-Utilización de GitHub para el Control de Versiones definiendo una rama para cada participante de grupo, una rama de 'dev' y la rama 'main' como producción.
-
-![Github](figures/GitHubbranch.png)
-
-
-Utilización de GitHub Projects para la creación, asignación, ejecución y finalización de tareas (backlog). Columna especifica para Discoveries: información sobre investigaciones sobre los datos.
-
-![AveragPrice por Regíon](figures/GitHubproject.png)
-
-
 ## Analisis e investigaciones de los datos en avocados.csv
 
 La información en el archivo avocados.csvincluye los codigos de clasificación de aguacates usando codigos PLU (codigo de búsqueda de precio en íngles).
