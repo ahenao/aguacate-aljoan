@@ -12,6 +12,23 @@ Organizacion de equipo
 7. Un jupyter por tarea/issue
 8. Reuniones diarias para verificar avances y problemas
 
+## utils
+
+Función en data.py: obtener_nuevo_avocado() devuelve el nuevo dataframe con la clasificación de regiones, agrupaciones y ciudades
+
+Para usar los módulos de utils en scripts se hace 
+```
+from utils.data import obtener_nuevo_avocado()
+```
+y para usarlos desde jupyter notebook, hay que agregar el path:
+
+```
+import sys, os
+sys.path.append('../../../aguacate-aljoan/')  # Adjust to the path where utils is located
+from utils.data import obtener_nuevo_avocado
+
+nuevo__df = obtener_nuevo_avocado()
+```
 ## Analisis e investigaciones de los datos en avocados.csv
 
 La información incluye los codigos de clasificación de aguacates usando codigos PLU (codigo de búsqueda de precio en íngles).
@@ -63,21 +80,3 @@ Transición de cosechas: Hubo un período de transición entre la cosecha anteri
 Dependencia de México: México es el mayor productor de aguacates del mundo, y cualquier interrupción en su suministro, ya sea por razones climáticas, huelgas o problemas logísticos, afecta significativamente el mercado global.
 
 Estos factores combinados llevaron a una gran volatilidad en los precios del aguacate durante 2017, lo que se reflejó en los datos de ventas utilizados
-
-## utils
-
-Función en data.py: obtener_nuevo_avocado() devuelve el nuevo dataframe con la clasificación de regiones, agrupaciones y ciudades
-
-Para usar los módulos de utils en scripts se hace 
-```
-from utils.data import obtener_nuevo_avocado()
-```
-y para usarlos desde jupyter notebook, hay que agregar el path:
-
-```
-import sys, os
-sys.path.append('../../../aguacate-aljoan/')  # Adjust to the path where utils is located
-from utils.data import obtener_nuevo_avocado
-
-nuevo__df = obtener_nuevo_avocado()
-```
