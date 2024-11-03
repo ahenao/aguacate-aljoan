@@ -12,7 +12,7 @@ Organizacion de equipo
 7. Un jupyter por tarea/issue
 8. Reuniones diarias para verificar avances y problemas
 
-## Analisis de los datos csv
+## Analisis e investigaciones de los datos en avocados.csv
 
 La información incluye los codigos de clasificación de aguacates usando codigos PLU (codigo de búsqueda de precio en íngles).
 
@@ -37,21 +37,21 @@ Codigos de la variedad Greenskins
 - 94224 - Organic Greenskin Large
 
 Referencia:
-https://californiaavocado.com/retail/avocado-plus/#:~:text=PLU%20numbers%20are%20used%20to,the%20regular%20four%2Ddigit%20code.
+[https://californiaavocado.com/retail/avocado-plus/#:~:text=PLU%20numbers%20are%20used%20to,the%20regular%20four%2Ddigit%20code]
 
 EL *avocado.csv* que estamos analizando solo incluye los codigos PLU Hass para avocado convencionales, aunque tiene otra columna de clasificación para avocado convencional y organico usando los mismo codigos.
 
 Otro punto de interes es que ciertas variedades, como el Hass, tienden a dar buenos rendimientos solo en años alternos. Después de una temporada con un bajo rendimiento, debido a factores como el frío (al cual el aguacate no tolera bien), los árboles tienden a producir abundantemente en la siguiente temporada. Esta cosecha abundante agota los carbohidratos almacenados, lo que resulta en un menor rendimiento en la siguiente temporada, y así se establece el patrón de alternancia en la producción.
 
 Referencia:
-https://www.agmrc.org/commodities-products/fruits/avocados#:~:text=They%20are%20thought%20to%20have,followed%20by%20Florida%20and%20Hawaii.
+[https://www.agmrc.org/commodities-products/fruits/avocados#:~:text=They%20are%20thought%20to%20have,followed%20by%20Florida%20and%20Hawaii]
 
 Durante temporadas de bajo rendimiento de los arboles, se compensa la baja producción local (EE.UU) con las importaciones de aguacates procedentes de otros paises como Mejico.
 
 En los datos de avocado.csv, se observa un incremento en los precios del aguacate durante el año 2017. Hemos intentado investigar las causas:
 
 La volatilidad del mercado de aguacates en 2017 se debió a varios factores clave:
-(https://www.bbc.com/mundo/noticias-49209380)
+[https://www.bbc.com/mundo/noticias-49209380]
 
 Alta demanda global: El consumo de aguacates aumentó significativamente en países como Estados Unidos, Europa y Asia.
 Este “boom” del aguacate se debió a su popularidad en la gastronomía y su versatilidad en diferentes platos.
