@@ -61,7 +61,7 @@ El *avocado.csv* que estamos analizando solo incluye los codigos PLU Hass para a
 Se puede observar en las columnas de datos:
 
 |Date|AveragePrice|Total Volume|4046|4225|4770|Total Bags|Small Bags|Large Bags|XLarge Bags|type|year|region|region_type|
-|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
 |2015-1-04|1.33|9213.49|3737.52|4327.52|0.00|1158.45|1158.45|0.00|0.0|organic|20150|Sacramento|City|
 |....|....|....|....|....|....|....|....|....|....|....|....|....|....|
 
