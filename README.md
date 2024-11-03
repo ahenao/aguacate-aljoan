@@ -54,9 +54,18 @@ Codigos de la variedad Greenskins
 - 94224 - Organic Greenskin Large
 
 Referencia:
-[https://californiaavocado.com/retail/avocado-plus/#:~:text=PLU%20numbers%20are%20used%20to,the%20regular%20four%2Ddigit%20code]
+https://californiaavocado.com/retail/avocado-plus/#:~:text=PLU%20numbers%20are%20used%20to,the%20regular%20four%2Ddigit%20code
 
-EL *avocado.csv* que estamos analizando solo incluye los codigos PLU Hass para avocado convencionales, aunque tiene otra columna de clasificación para avocado convencional y organico usando los mismo codigos.
+El *avocado.csv* que estamos analizando solo incluye los codigos PLU Hass para avocado convencionales, aunque tiene otra columna de clasificación para avocado convencional y organico usando los mismo codigos.
+
+Se puede observar en las columnas de datos:
+
+|Date|AveragePrice|Total Volume|4046|4225|4770|Total Bags|Small Bags|Large Bags|XLarge Bags|type|year|region|region_type|
+|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+|2015-1-04|1.33|9213.49|3737.52|4327.52|0.00|1158.45|1158.45|0.00|0.0|organic|20150|Sacramento|City|
+|....|....|....|....|....|....|....|....|....|....|....|....|....|....|
+
+Según la documentación, Total Volume es el total de volumen de ventas de aguacates con los PLUs 4046, 4225 y 4770, pero con coinciden la suma de volumenes por PLU con Total Volume. Dado que hay mas tipos/PLUs, es posible que hay PLUs que cuentan para el Total Volume pero no se han incluido en el csv.
 
 Otro punto de interes es que ciertas variedades, como el Hass, tienden a dar buenos rendimientos solo en años alternos. Después de una temporada con un bajo rendimiento, debido a factores como el frío (al cual el aguacate no tolera bien), los árboles tienden a producir abundantemente en la siguiente temporada. Esta cosecha abundante agota los carbohidratos almacenados, lo que resulta en un menor rendimiento en la siguiente temporada, y así se establece el patrón de alternancia en la producción.
 
@@ -65,7 +74,7 @@ Referencia:
 
 Durante temporadas de bajo rendimiento de los arboles, se compensa la baja producción local (EE.UU) con las importaciones de aguacates procedentes de otros paises como Mejico.
 
-En los datos de avocado.csv, se observa un incremento en los precios del aguacate durante el año 2017. Hemos intentado investigar las causas:
+En los datos de *avocado.csv*, se observa un incremento en los precios del aguacate durante el año 2017. Hemos intentado investigar las causas:
 
 La volatilidad del mercado de aguacates en 2017 se debió a varios factores clave:
 [https://www.bbc.com/mundo/noticias-49209380]
@@ -79,4 +88,16 @@ Transición de cosechas: Hubo un período de transición entre la cosecha anteri
 
 Dependencia de México: México es el mayor productor de aguacates del mundo, y cualquier interrupción en su suministro, ya sea por razones climáticas, huelgas o problemas logísticos, afecta significativamente el mercado global.
 
-Estos factores combinados llevaron a una gran volatilidad en los precios del aguacate durante 2017, lo que se reflejó en los datos de ventas utilizados
+Estos factores combinados llevaron a una gran volatilidad en los precios del aguacate durante 2017, lo que se reflejó en los datos de ventas utilizados.
+
+## Análisis de Series
+
+En el gráfico abajo, se puede observar el incremento del precio del aguacate durante el periodo 2017.
+
+![Alt text](figures/promediaAvgPriceporregion.png)
+
+## Elasticidad
+
+Sin embargo, la elasticidad volumen contra precio muestra aguacates organicos, el precio tienen menos afectación a la demanda comparado con los convencionales <=1.5  y > 1.5
+![Alt text](figures/ElasticidadcompOrgvsConv-GreaterRegion.png)
+
