@@ -12,6 +12,17 @@ Organizacion de equipo
 7. Un jupyter por tarea/issue
 8. Reuniones diarias para verificar avances y problemas
 
+## Entorno de control de versiones y colaboración
+
+Utilización de GitHub para el Control de Versiones definiendo una rama para cada participante de grupo, una rama de 'dev' y la rama 'main' como producción.
+
+![Github](figures/GitHubbranches.png)
+
+
+Utilización de GitHub Projects para la creación, asignación, ejecución y finalización de tareas (backlog). Columna especifica para Discoveries: información sobre investigaciones sobre los datos.
+
+![AveragPrice por Regíon](figures/GitHubprojects.png)
+
 ## utils
 
 Función en data.py: obtener_nuevo_avocado() devuelve el nuevo dataframe con la clasificación de regiones, agrupaciones y ciudades
