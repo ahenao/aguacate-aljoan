@@ -112,7 +112,7 @@ Referencia: <https://www.bbc.com/mundo/noticias-49209380>
 
 Se ha encontrado la combinatoria de Regiones que compenen el valor del TotalUs y se ha decidido agregar una columna que clasifica las regiones en Cities, GreaterRegions, States, TotalUS para realizar los analisis de cada segmentacion en particular sin mezclar estas distintas segmentaciones
 
-![agrupation](figures/Screenshot-2024-10-25-at-11.31.19.png)
+![agrupation](figures/composicion.png)
 
 En cada Jupyter se incluye esta linea de codigo donde se puede ir cambiando la segmentacion para realizar cada analisis
 
@@ -140,27 +140,27 @@ Analisis por tipo de aguacate
 
 En el analisis del dataset se identifico que las entradas al dataset son todos los domingos, 1 vez a la semana  a partir de esto se define la periodicidad en 52 semanas que es lo que tiene 1 año
 
-![Periodicidad](season_decompose-52.png)
+![Periodicidad](figures/season_decompose-52.png)
 
 *Serie Original*
 
 Este grafico es con la segmentacion GreaterRegion
 
-![Original](serie_original-por-tipo.png)
+![Original](figures/serie_original-por-tipo.png)
 
 Si se hace analizando TotalUS, se observan unos outliers en el aguacate organico
 
-![TotalUS](outliers-total-US-junio-2015-organico.png)
+![TotalUS](figures/outliers-total-US-junio-2015-organico.png)
 
 *Tendencia AveragePrice*
 
-![Tendencia](tendencia.png)
+![Tendencia](figures/tendencia.png)
 
 *Estacionalidad AveragePrice*
 
 Se observan picos en fin de verano/otoño y valles en invierno
 
-![Estacionalidad](estacionalidad-con-picos-en-verano-otoño.png)
+![Estacionalidad](figures/estacionalidad-con-picos-en-verano-otoño.png)
 
 
 ## Elasticidad
@@ -181,11 +181,11 @@ Demanda Perfectamente Inelástica: Una elasticidad de 0 implicaría que la canti
 
 Analizando los ordenes de magnitud los volumenes de ventas de los aguacates organicos son muy inferiores a los del convencional, es por esto que se trabajo unicamente con la evolucion de precios del convencional
 
-![Alt text](ordenes-de-magnitud-de-volumen.png)
+![Alt text](figures/ordenes-de-magnitud-de-volumen.png)
 
-![Alt text](matriz-de-correlacion.png)
+![Alt text](figures/matriz-de-correlacion.png)
 
-![Alt text](regresion-lineal-y-polinomica.png)
+![Alt text](figures/regresion-lineal-y-polinomica.png)
 
 
 ## Predicción mensual
