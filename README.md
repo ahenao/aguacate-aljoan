@@ -28,9 +28,9 @@ Utilización de GitHub Projects para la creación, asignación, ejecución y fin
 ## utils
 
 Hemos creado este folder para compartir código que se reuse en todo el proyecto.
-Funciones en data.py: 
+Funciones en data.py ([data utils](https://github.com/ahenao/aguacate-aljoan/blob/main/utils/data.py)): 
 - obtener_nuevo_avocado(): devuelve el nuevo dataframe con la clasificación de regiones, agrupaciones y ciudades
-  [data utils](https://github.com/ahenao/aguacate-aljoan/blob/main/utils/data.py)
+  
 
 Para usar los módulos de utils en scripts se hace 
 ```
