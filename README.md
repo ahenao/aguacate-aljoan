@@ -30,7 +30,12 @@ Utilización de GitHub Projects para la creación, asignación, ejecución y fin
 Hemos creado este folder para compartir código que se reuse en todo el proyecto.
 Funciones en data.py ([data utils](https://github.com/ahenao/aguacate-aljoan/blob/main/utils/data.py)): 
 - obtener_nuevo_avocado(): devuelve el nuevo dataframe con la clasificación de regiones, agrupaciones y ciudades
-  
+- imputar_fechas(): imputa valores a tres fechas que no aparecen en el dataset original por promedio de una semana anterios y la semana posterior
+  ```
+    missing_dates = ['2015-12-06', '2017-06-18', '2017-06-25']
+    region = 'WestTexNewMexico'
+    avocado_type = 'organic'
+  ```
 
 Para usar los módulos de utils en scripts se hace 
 ```
