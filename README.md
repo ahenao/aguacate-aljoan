@@ -1,16 +1,17 @@
 # aguacate-aljoan
 Mini Proyecto UOC_1
 
-Organizacion de equipo
+## Reglas de Organización del Equipo
 
-1. Siempre se trabaja en su propia rama
-2. Desde local se hace push a su propia rama
-3. En github se verifica en la rama que este bien y se hace merge a la rama dev
-4. Andres es el que hace los merge a main
-5. Las tareas estan en el backlog, se asignan a uno y se ponen en in progress una vez que se comienza con ellas
-6. Hacer commit con frecuencia de cambios, y push al menos una vez al día, o al terminar una tarea
-7. Un jupyter por tarea/issue
-8. Reuniones diarias para verificar avances y problemas
+1. **Flujo de Ramas:** Cada miembro del equipo trabaja en su propia rama.
+2. **Push a Ramas Personales:** Los cambios se envían desde el entorno local a la rama personal de cada miembro.
+3. **Merge a la Rama dev:** Verifica tus cambios en tu rama en GitHub, luego inicia un merge hacia la rama dev.
+4. **Merge a main:** Solo Andrés es responsable de hacer los merges a la rama main.
+5. **Gestión de Tareas:** Las tareas están organizadas en el backlog. Asigna tareas a tu nombre y pásalas a "En Progreso" cuando comiences a trabajar.
+6. **Tipo de paneles:** To Do, In Progress, Done, Discoveries
+7. **Commits Frecuentes y Push Diario:** Realiza commits frecuentemente para documentar el progreso y haz push al menos una vez al día o al completar una tarea.
+8. **Un Notebook por Tarea:** Usa un solo Jupyter Notebook por cada tarea o issue.
+9. **Reuniones Diarias:** Asiste a reuniones diarias para revisar avances y discutir cualquier problema. Canal de comunicacion Google Meet cuenta de UOC. Comentarios en grupo compartido de Wapp
 
 ## Entorno de control de versiones y colaboración
 
@@ -107,11 +108,60 @@ Estos factores combinados llevaron a una gran volatilidad en los precios del agu
 
 Referencia: <https://www.bbc.com/mundo/noticias-49209380>
 
+## Asunciones tomadas
+
+Se ha encontrado la combinatoria de Regiones que compenen el valor del TotalUs y se ha decidido agregar una columna que clasifica las regiones en Cities, GreaterRegions, States, TotalUS para realizar los analisis de cada segmentacion en particular sin mezclar estas distintas segmentaciones
+
+![agrupation](figures/composicion.png)
+
+En cada Jupyter se incluye esta linea de codigo donde se puede ir cambiando la segmentacion para realizar cada analisis
+
+![segmentatios](figures/segmentations.png)
+
+
 ## Análisis de Series
+
+**Analisis de AveragePrice**
 
 En el gráfico abajo, se puede observar el incremento del precio del aguacate durante el periodo 2017 debido a la volatilidad del mercado de agucates explicado
 
 ![AveragPrice por Regíon](figures/promediaAvgPriceporregion.png)
+
+Analisis por segmentacion GreaterRegion
+
+![AveragPrice por GreaterRegíon](figures/evolucion-de-precio-promedio-por-geater-region-por-season.png)
+
+Analisis por tipo de aguacate
+
+![AveragPrice por type](figures/precio-promedio-por-mes-por-tipo.png)
+
+
+**Analisis de series temporales**
+
+En el analisis del dataset se identifico que las entradas al dataset son todos los domingos, 1 vez a la semana  a partir de esto se define la periodicidad en 52 semanas que es lo que tiene 1 año
+
+![Periodicidad](figures/season_decompose-52.png)
+
+*Serie Original*
+
+Este grafico es con la segmentacion GreaterRegion
+
+![Original](figures/serie_original-por-tipo.png)
+
+Si se hace analizando TotalUS, se observan unos outliers en el aguacate organico
+
+![TotalUS](figures/outliers-total-US-junio-2015-organico.png)
+
+*Tendencia AveragePrice*
+
+![Tendencia](figures/tendencia.png)
+
+*Estacionalidad AveragePrice*
+
+Se observan picos en fin de verano/otoño y valles en invierno
+
+![Estacionalidad](figures/estacionalidad-con-picos-en-verano-otoño.png)
+
 
 ## Elasticidad
 
@@ -126,6 +176,16 @@ Demanda Elástica: Si el valor de elasticidad es menor que -1 (por ejemplo, -1.5
 Demanda Inelástica: Si el valor de elasticidad está entre 0 y -1 (por ejemplo, -0.5), la demanda es inelástica. Aquí, los cambios en el precio tienen un efecto menor en la cantidad demandada, lo que sugiere que los consumidores son menos sensibles a los cambios de precio para los aguacates.
 
 Demanda Perfectamente Inelástica: Una elasticidad de 0 implicaría que la cantidad demandada no cambia independientemente de los cambios de precio, lo cual es raro para bienes como los aguacates.
+
+## Analisis de Regresión
+
+Analizando los ordenes de magnitud los volumenes de ventas de los aguacates organicos son muy inferiores a los del convencional, es por esto que se trabajo unicamente con la evolucion de precios del convencional
+
+![Alt text](figures/ordenes-de-magnitud-de-volumen.png)
+
+![Alt text](figures/matriz-de-correlacion.png)
+
+![Alt text](figures/regresion-lineal-y-polinomica.png)
 
 
 ## Predicción mensual
