@@ -172,7 +172,7 @@ Se observan picos en fin de verano/otoño y valles en invierno
 ![Estacionalidad](figures/estacionalidad-con-picos-en-verano-otoño.png)
 
 
-![Price-Volume](figures/price-volume.png.png)
+![Price-Volume](figures/price-volume.png)
 
 
 ## Elasticidad
@@ -196,7 +196,7 @@ Entonces seran type-region
 
 ![retention-rate-greater-region](figures/retention-type-region.png)
 
-En funcion a lo observado aqui, hacemos el mismo analisis filtrando ahora por ciudades para ver en que ciudades hay un boom de ventas de aguacate organico.
+En funcion a lo observado aqui, hacemos el mismo analisis filtrando ahora por ciudades para ver en que ciudades hay un boom de ventas de aguacate organico en la region NorthEast. Siendo el retention rate 8, es decir las ventas iniciales en 2015, fueron 8 veces mas altas al final del periodo.
 
 ![retention-rate-greater-city](figures/retention-per-city.png)
 
