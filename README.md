@@ -189,6 +189,10 @@ Demanda Inelástica: Si el valor de elasticidad está entre 0 y -1 (por ejemplo,
 
 Demanda Perfectamente Inelástica: Una elasticidad de 0 implicaría que la cantidad demandada no cambia independientemente de los cambios de precio, lo cual es raro para bienes como los aguacates.
 
+![Avg Price vs Volume](figures/west-organic-price-volume.png)
+
+Luego del analisis de sensibilidad y las conclusiones encontradas respecto a la alta sensibilidad en el cohorte organic-West, se realiza la misma grafica avg price vs total volume filtrando solo este cohorte y se observa que los picos son mas pronunciados en este cohorte en particular
+
 ### Analisis de Cohortes
 
 Los cohortes que tomaremos para el analisis del retention rate son los mismos que utilizaremos para las predicciones dados las diferencias en ordenes de magnitud de organicos y convencionales en volumen.
