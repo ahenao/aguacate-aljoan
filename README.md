@@ -227,6 +227,11 @@ Haciendo uso del modelo ARIMA (AutoRegressive Integrating MovingAverages) para p
 
 La línea azul (y) representa los datos reales. realizamos un entrenamiento del modelo con datos del 2015.01 hasta 2017.07, y se realizaron predicciones desde 2017.08 hasta 2018.03 (para los cuales tenemos datos). Las predicciones junto a un intervalo de confianza del 90% se muestran en rosa. En algunos casos, las predicciones capturan las fluctuaciones (ver California), mientras en otros casos, sólo captura un rango de valores (que dentro del intervalo de confianza son acertados) sin más detalle en fluctuaciones inter-mensuales (ver SouthCentral). 
 
+Los modelos ARIMA hacen uso de las autocorrelaciones de la variable a predecir con sus valores en tiempos pasados de la serie histórica. Las siguientes gráficas muestran las autocorrelaciones para dos series temporales: organic-West y organic-Northeast. Las diferencias recalcan como diferentes cohortes pueden tener un comportamiento diferente y a veces es importante considerar no solamente un único modelo para capturar los comportamientos de interés. La autocorrelación también muestra un poco la estacionalidad y como un valor pasado puede tener efectos fluctuantes (en una estacionalidad perfecta sería en un periodo de 12 meses) en los valores futuros. La autocorrelación disminuye en el tiempo, los valores más cercanos en el tiempo son los más relevantes.
+
+![Alt text](figures/531b.png)
+
+
 También realizamos predicciones mensuales para TotalUS (una sola serie temporal, en lugar de 8 en el caso de regiones agrupadas). La siguiente tabla resume el MAPE (Error Absoluto Medio Porcentual):
 
 | Error MAPE| Valor [%] | 
