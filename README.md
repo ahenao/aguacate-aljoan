@@ -163,6 +163,9 @@ Se observan picos en fin de verano/otoño y valles en invierno
 ![Estacionalidad](figures/estacionalidad-con-picos-en-verano-otoño.png)
 
 
+![Price-Volume](figures/price-volume.png.png)
+
+
 ## Elasticidad
 
 Sin embargo, la elasticidad volumen contra precio muestra que aguacates organicos (-1.5) es algo menos elástico comparado con aguacates convencionels (-2.5) a la demanda comparado con los convencionales:
@@ -176,6 +179,20 @@ Demanda Elástica: Si el valor de elasticidad es menor que -1 (por ejemplo, -1.5
 Demanda Inelástica: Si el valor de elasticidad está entre 0 y -1 (por ejemplo, -0.5), la demanda es inelástica. Aquí, los cambios en el precio tienen un efecto menor en la cantidad demandada, lo que sugiere que los consumidores son menos sensibles a los cambios de precio para los aguacates.
 
 Demanda Perfectamente Inelástica: Una elasticidad de 0 implicaría que la cantidad demandada no cambia independientemente de los cambios de precio, lo cual es raro para bienes como los aguacates.
+
+### Analisis de Cohortes
+
+Los cohortes que tomaremos para el analisis del retention rate son los mismos que utilizaremos para las predicciones dados las diferencias en ordenes de magnitud de organicos y convencionales en volumen.
+Entonces seran type-region
+
+![retention-rate-greater-region](figures/retention-type-region.png)
+
+En funcion a lo observado aqui, hacemos el mismo analisis filtrando ahora por ciudades para ver en que ciudades hay un boom de ventas de aguacate organico.
+
+![retention-rate-greater-city](figures/retention-per-city.png)
+
+No tenemos la composicion exacta de cada greater region en ciudades, pero podemos observar que 5 de los 10 cohortes que tuvieron tasa de retencion mas alta son correspondientes a ciudades que son geograficamente de la greater region "NorthEast". Estas son: Boston, New York, Philadelphia, Pittsburg, Syracuse. Siendo la mas importante en terminos de retention rate Boston.
+
 
 ## Analisis de Regresión
 
