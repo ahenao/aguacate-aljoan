@@ -174,6 +174,10 @@ Se observan picos en fin de verano/otoño y valles en invierno
 
 ![Price-Volume](figures/price-volume.png)
 
+![violin](figures/violin.png)
+
+![violinus](figures/violin-totalUS.png)
+
 
 ## Elasticidad
 
