@@ -175,8 +175,12 @@ Se observan picos en fin de verano/otoño y valles en invierno
 ![Price-Volume](figures/price-volume.png)
 
 
+Analizando el gráfico de violin de TotalUS, se ve que no hay tanta dispersion entre los datos de Total Volume.
+
 ![violin](figures/violin-totalUS.png)
 
+Sin embargo si realizamos el analisis segmentando por GreaterReagion podemos ver algunas regiones como West, California y SouthCentral con dispersiones pronunciadas.
+Por otro lado la region Plains tiene un comportamiento bastante uniforme.
 
 ![violin](figures/violin.png)
 
