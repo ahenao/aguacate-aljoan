@@ -175,6 +175,12 @@ Se observan picos en fin de verano/otoño y valles en invierno
 ![Price-Volume](figures/price-volume.png)
 
 
+![violin](figures/violinUS.png)
+
+
+![violin](figures/violin.png)
+
+
 ## Elasticidad
 
 Sin embargo, la elasticidad volumen contra precio muestra que aguacates organicos (-1.5) es algo menos elástico comparado con aguacates convencionels (-2.5) a la demanda comparado con los convencionales:
@@ -219,7 +225,9 @@ Analizando los ordenes de magnitud los volumenes de ventas de los aguacates orga
 
 ![Alt text](figures/matriz-de-correlacion.png)
 
-![Alt text](figures/regresion-lineal-y-polinomica.png)
+![Alt text](figures/regression.png)
+
+![Alt text](figures/analisis_de_caracteristicas.png)
 
 
 ## Predicción mensual
