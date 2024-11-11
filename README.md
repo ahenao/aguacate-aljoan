@@ -27,20 +27,29 @@ Utilización de GitHub Projects para la creación, asignación, ejecución y fin
 
 ## utils
 
-Función en data.py: obtener_nuevo_avocado() devuelve el nuevo dataframe con la clasificación de regiones, agrupaciones y ciudades
+Hemos creado este folder para compartir código que se reuse en todo el proyecto.
+Funciones en data.py ([data utils](https://github.com/ahenao/aguacate-aljoan/blob/main/utils/data.py)): 
+- obtener_nuevo_avocado(): devuelve el nuevo dataframe con la clasificación de regiones, agrupaciones y ciudades
+- imputar_fechas(): imputa valores a tres fechas que no aparecen en el dataset original por promedio de una semana anterios y la semana posterior. Esta función ya realiza un llamado a obtener_nuevo_avocado() para trabajar con los labels de regiones.
+  ```
+    missing_dates = ['2015-12-06', '2017-06-18', '2017-06-25']
+    region = 'WestTexNewMexico'
+    avocado_type = 'organic'
+  ```
 
 Para usar los módulos de utils en scripts se hace 
 ```
-from utils.data import obtener_nuevo_avocado()
+from utils.data import obtener_nuevo_avocado, impotar_fechas
 ```
 y para usarlos desde jupyter notebook, hay que agregar el path:
 
 ```
 import sys, os
 sys.path.append('../../../aguacate-aljoan/')  # Adjust to the path where utils is located
-from utils.data import obtener_nuevo_avocado
+from utils.data import obtener_nuevo_avocado, imputar_fechas
 
 nuevo__df = obtener_nuevo_avocado()
+imputar_fechas_df = imputar_fechas()
 ```
 ## Analisis e investigaciones de los datos en avocados.csv
 
@@ -163,6 +172,9 @@ Se observan picos en fin de verano/otoño y valles en invierno
 ![Estacionalidad](figures/estacionalidad-con-picos-en-verano-otoño.png)
 
 
+![Price-Volume](figures/price-volume.png)
+
+
 ## Elasticidad
 
 Sin embargo, la elasticidad volumen contra precio muestra que aguacates organicos (-1.5) es algo menos elástico comparado con aguacates convencionels (-2.5) a la demanda comparado con los convencionales:
@@ -180,6 +192,24 @@ Demanda Elástica: Si el valor de elasticidad es menor que -1 (por ejemplo, -1.5
 Demanda Inelástica: Si el valor de elasticidad está entre 0 y -1 (por ejemplo, -0.5), la demanda es inelástica. Aquí, los cambios en el precio tienen un efecto menor en la cantidad demandada, lo que sugiere que los consumidores son menos sensibles a los cambios de precio para los aguacates.
 
 Demanda Perfectamente Inelástica: Una elasticidad de 0 implicaría que la cantidad demandada no cambia independientemente de los cambios de precio, lo cual es raro para bienes como los aguacates.
+
+![Avg Price vs Volume](figures/west-organic-price-volume.png)
+
+Luego del analisis de sensibilidad y las conclusiones encontradas respecto a la alta sensibilidad en el cohorte organic-West, se realiza la misma grafica avg price vs total volume filtrando solo este cohorte y se observa que los picos son mas pronunciados en este cohorte en particular
+
+### Analisis de Cohortes
+
+Los cohortes que tomaremos para el analisis del retention rate son los mismos que utilizaremos para las predicciones dados las diferencias en ordenes de magnitud de organicos y convencionales en volumen.
+Entonces seran type-region
+
+![retention-rate-greater-region](figures/retention-type-region.png)
+
+En funcion a lo observado aqui, hacemos el mismo analisis filtrando ahora por ciudades para ver en que ciudades hay un boom de ventas de aguacate organico en la region NorthEast. Siendo el retention rate 8, es decir las ventas iniciales en 2015, fueron 8 veces mas altas al final del periodo.
+
+![retention-rate-greater-city](figures/retention-per-city.png)
+
+No tenemos la composicion exacta de cada greater region en ciudades, pero podemos observar que 5 de los 10 cohortes que tuvieron tasa de retencion mas alta son correspondientes a ciudades que son geograficamente de la greater region "NorthEast". Estas son: Boston, New York, Philadelphia, Pittsburg, Syracuse. Siendo la mas importante en terminos de retention rate Boston.
+
 
 ## Analisis de Regresión
 
@@ -200,6 +230,11 @@ Haciendo uso del modelo ARIMA (AutoRegressive Integrating MovingAverages) para p
 ![Alt text](figures/531.png)
 
 La línea azul (y) representa los datos reales. realizamos un entrenamiento del modelo con datos del 2015.01 hasta 2017.07, y se realizaron predicciones desde 2017.08 hasta 2018.03 (para los cuales tenemos datos). Las predicciones junto a un intervalo de confianza del 90% se muestran en rosa. En algunos casos, las predicciones capturan las fluctuaciones (ver California), mientras en otros casos, sólo captura un rango de valores (que dentro del intervalo de confianza son acertados) sin más detalle en fluctuaciones inter-mensuales (ver SouthCentral). 
+
+Los modelos ARIMA hacen uso de las autocorrelaciones de la variable a predecir con sus valores en tiempos pasados de la serie histórica. Las siguientes gráficas muestran las autocorrelaciones para dos series temporales: organic-West y organic-Northeast. Las diferencias recalcan como diferentes cohortes pueden tener un comportamiento diferente y a veces es importante considerar no solamente un único modelo para capturar los comportamientos de interés. La autocorrelación también muestra un poco la estacionalidad y como un valor pasado puede tener efectos fluctuantes (en una estacionalidad perfecta sería en un periodo de 12 meses) en los valores futuros. La autocorrelación disminuye en el tiempo, los valores más cercanos en el tiempo son los más relevantes.
+
+![Alt text](figures/531b.png)
+
 
 También realizamos predicciones mensuales para TotalUS (una sola serie temporal, en lugar de 8 en el caso de regiones agrupadas). La siguiente tabla resume el MAPE (Error Absoluto Medio Porcentual):
 
