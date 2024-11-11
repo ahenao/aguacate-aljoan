@@ -225,7 +225,9 @@ Analizando los ordenes de magnitud los volumenes de ventas de los aguacates orga
 
 ![Alt text](figures/matriz-de-correlacion.png)
 
-![Alt text](figures/regresion-lineal-y-polinomica.png)
+![Alt text](figures/regression.png)
+
+![Alt text](figures/analisis_de_caracteristicas.png)
 
 
 ## Predicción mensual
