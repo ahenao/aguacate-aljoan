@@ -175,7 +175,7 @@ Se observan picos en fin de verano/otoño y valles en invierno
 ![Price-Volume](figures/price-volume.png)
 
 
-![violin](figures/violinUS.png)
+![violin](figures/violin-totalUS.png)
 
 
 ![violin](figures/violin.png)
