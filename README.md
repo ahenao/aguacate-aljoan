@@ -20,7 +20,7 @@ Utilización de GitHub para el Control de Versiones definiendo una rama para cad
 ![Github](figures/GitHubbranches.png)
 
 
-Utilización de GitHub Projects para la creación, asignación, ejecución y finalización de tareas (backlog). Columna especifica para Discoveries: información sobre investigaciones sobre los datos.
+Utilización de GitHub Projects para la creación, asignación, ejecución y finalización de tareas (backlog). Columna concreta para 'Discoveries': información sobre investigaciones sobre los datos.
 
 ![AveragPrice por Regíon](figures/GitHubprojects.png)
 
@@ -51,28 +51,28 @@ from utils.data import obtener_nuevo_avocado, imputar_fechas
 nuevo__df = obtener_nuevo_avocado()
 imputar_fechas_df = imputar_fechas()
 ```
-## Analisis e investigaciones de los datos en avocados.csv
+## Análisis e investigaciones de los datos en avocados.csv
 
-La información en el archivo avocados.csvincluye los codigos de clasificación de aguacates usando codigos PLU (codigo de búsqueda de precio en íngles).
+La información en el archivo avocados.csv incluye los códigos de clasificación de aguacates usando códigos PLU (código de búsqueda de precio en inglés).
 
-Estos codigos son de la variedad Hass:
+Estos códigos son de la variedad Hass:
 
 - 4046 - Hass Small
 - 4225 - Hass Large
 - 4770 - Hass Extra Large
 
-Existen codigos adicionales Hass:
+Existen códigos adicionales Hass:
 
 - 94046 - Organic Hass Small
 - 94225 - Organic Hass Large
 - 94770 - Organic Hass Extra Large
 
-Codigos de la variedad GEM:
+Códigos de la variedad GEM:
 
 - 3509 - variedad GEM de todos los tamaños
-- 93509 -veriedad GEM organic de todos los tamaños
+- 93509 -variedad GEM orgánico de todos los tamaños
 
-Codigos de la variedad Greenskins
+Códigos de la variedad Greenskins
 
 - 4222 - Greenskin Small
 - 94222 - Organic Greenskin Small
@@ -82,7 +82,7 @@ Codigos de la variedad Greenskins
 Referencia:
 <https://californiaavocado.com/retail/avocado-plus/#:~:text=PLU%20numbers%20are%20used%20to,the%20regular%20four%2Ddigit%20code>
 
-El *avocado.csv* que estamos analizando solo incluye los codigos PLU Hass para avocado convencionales, aunque tiene otra columna de clasificación para avocado convencional y organico usando los mismo codigos.
+El *avocado.csv* que estamos analizando solo incluye los códigos PLU Hass para avocado convencionales, aunque tiene otra columna de clasificación para avocado convencional y organico usando los mismo códigos.
 
 Se puede observar en las columnas de datos:
 
@@ -91,14 +91,14 @@ Se puede observar en las columnas de datos:
 |2015-1-04|1.33|9213.49|3737.52|4327.52|0.00|1158.45|1158.45|0.00|0.0|organic|20150|Sacramento|City|
 |....|....|....|....|....|....|....|....|....|....|....|....|....|....|
 
-Según la documentación, Total Volume es el total de volumen de ventas de aguacates con los PLUs 4046, 4225 y 4770, pero con coinciden la suma de volumenes por PLU con Total Volume. Dado que hay mas tipos/PLUs, es posible que hay PLUs que cuentan para el Total Volume pero no se han incluido en el csv.
+Según la documentación, Total Volume es el total de volumen de ventas de aguacates con los PLUs 4046, 4225 y 4770, pero con coinciden la suma de volúmenes por PLU con Total Volume. Dado que hay mas tipos/PLUs, es posible que hay PLUs que cuentan para el Total Volume pero no se han incluido en el csv.
 
-Otro punto de interes es que ciertas variedades, como el Hass, tienden a dar buenos rendimientos solo en años alternos. Después de una temporada con un bajo rendimiento, debido a factores como el frío (al cual el aguacate no tolera bien), los árboles tienden a producir abundantemente en la siguiente temporada. Esta cosecha abundante agota los carbohidratos almacenados, lo que resulta en un menor rendimiento en la siguiente temporada, y así se establece el patrón de alternancia en la producción.
+Otro punto de interés es que ciertas variedades, como el Hass, tienden a dar buenos rendimientos solo en años alternos. Después de una temporada con un bajo rendimiento, debido a factores como el frío (al cual el aguacate no tolera bien), los árboles tienden a producir abundantemente en la siguiente temporada. Esta cosecha abundante agota los carbohidratos almacenados, lo que resulta en un menor rendimiento en la siguiente temporada, y así se establece el patrón de alternancia en la producción.
 
 Referencia:
 <https://www.agmrc.org/commodities-products/fruits/avocados#:~:text=They%20are%20thought%20to%20have,followed%20by%20Florida%20and%20Hawaii>
 
-Durante temporadas de bajo rendimiento de los arboles, se compensa la baja producción local (EE.UU) con las importaciones de aguacates procedentes de otros paises como Mejico.
+Durante temporadas de bajo rendimiento de los árboles, se compensa la baja producción local (EE.UU) con las importaciones de aguacates procedentes de otros países como México.
 
 En los datos de *avocado.csv*, se observa un incremento en los precios del aguacate durante el año 2017. Hemos intentado investigar las causas:
 
@@ -119,45 +119,45 @@ Referencia: <https://www.bbc.com/mundo/noticias-49209380>
 
 ## Asunciones tomadas
 
-Se ha encontrado la combinatoria de Regiones que compenen el valor del TotalUs y se ha decidido agregar una columna que clasifica las regiones en Cities, GreaterRegions, States, TotalUS para realizar los analisis de cada segmentacion en particular sin mezclar estas distintas segmentaciones
+Se ha encontrado la combinatoria de Regiones que componen el valor del TotalUs y se ha decidido agregar una columna que clasifica las regiones en Cities, GreaterRegions, States, TotalUS para realizar los análisis de cada segmentación en particular sin mezclar estas distintas segmentaciones
 
 ![agrupation](figures/composicion.png)
 
 En cada Jupyter se incluye esta linea de codigo donde se puede ir cambiando la segmentacion para realizar cada analisis
 
-![segmentatios](figures/segmentations.png)
+![segmentation](figures/segmentations.png)
 
 
 ## Análisis de Series
 
-**Analisis de AveragePrice**
+**Análisis de AveragePrice**
 
-En el gráfico abajo, se puede observar el incremento del precio del aguacate durante el periodo 2017 debido a la volatilidad del mercado de agucates explicado
+En el gráfico abajo, se puede observar el incremento del precio del aguacate durante el periodo 2017 debido a la volatilidad del mercado de aguacates explicado
 
 ![AveragPrice por Regíon](figures/promediaAvgPriceporregion.png)
 
-Analisis por segmentacion GreaterRegion
+Análisis por segmentación GreaterRegion
 
 ![AveragPrice por GreaterRegíon](figures/evolucion-de-precio-promedio-por-geater-region-por-season.png)
 
-Analisis por tipo de aguacate
+Análisis por tipo de aguacate
 
 ![AveragPrice por type](figures/precio-promedio-por-mes-por-tipo.png)
 
 
-**Analisis de series temporales**
+**Análisis de series temporales**
 
-En el analisis del dataset se identifico que las entradas al dataset son todos los domingos, 1 vez a la semana  a partir de esto se define la periodicidad en 52 semanas que es lo que tiene 1 año
+En el análisis del dataset se identificó que las entradas al dataset son todos los domingos, 1 vez a la semana a partir de esto se define la periodicidad en 52 semanas que es lo que tiene 1 año
 
 ![Periodicidad](figures/season_decompose-52.png)
 
 *Serie Original*
 
-Este grafico es con la segmentacion GreaterRegion
+Este grafico es con la segmentación GreaterRegion
 
 ![Original](figures/serie_original-por-tipo.png)
 
-Si se hace analizando TotalUS, se observan unos outliers en el aguacate organico
+Si se hace analizando TotalUS, se observan unos outliers en el aguacate orgánico
 
 ![TotalUS](figures/outliers-total-US-junio-2015-organico.png)
 
@@ -175,12 +175,12 @@ Se observan picos en fin de verano/otoño y valles en invierno
 ![Price-Volume](figures/price-volume.png)
 
 
-Analizando el gráfico de violin de TotalUS, se ve que no hay tanta dispersion entre los datos de Total Volume.
+Analizando el gráfico de violín de TotalUS, se ve que no hay tanta dispersion entre los datos de Total Volume.
 
-![violin](figures/violin-totalUS.png)
+![violín](figures/violin-totalUS.png)
 
 Sin embargo si realizamos el analisis segmentando por GreaterReagion podemos ver algunas regiones como West, California y SouthCentral con dispersiones pronunciadas.
-Por otro lado la region Plains tiene un comportamiento bastante uniforme.
+Por otro lado, la región Plains tiene un comportamiento bastante uniforme.
 
 ![violin](figures/violin.png)
 
@@ -191,7 +191,7 @@ Sin embargo, la elasticidad volumen contra precio muestra que aguacates organico
 
 ![Elasticidad Volumen vs Precio](figures/ElasticidadcompOrgvsConv-GreaterRegion.png)
 
-A continuación mostramos la elasticidad segmentado por tipos de aguacate y región. Se ve que a pesar de que el aguacate convencional en conjunto es mas elastico que el agucate organico, si el analisis lo realizamos por greaterregion el cohorte con mayor sensibilidad es uncohorte de aguacates organicos, en particular organic-West.
+A continuación, mostramos la elasticidad segmentado por tipos de aguacate y región. Se ve que a pesar de que el aguacate convencional en conjunto es mas elástico que el aguacate orgánico, si el análisis lo realizamos por greaterregion la cohorte con mayor sensibilidad es una cohorte de aguacates orgánicos, en particular organic-West.
 
 ![Elasticidad Volumen vs Precio](figures/ElasticidadcompOrgvsConv-GreaterRegionUID.png)
 
@@ -205,25 +205,25 @@ Demanda Perfectamente Inelástica: Una elasticidad de 0 implicaría que la canti
 
 ![Avg Price vs Volume](figures/west-organic-price-volume.png)
 
-Luego del analisis de sensibilidad y las conclusiones encontradas respecto a la alta sensibilidad en el cohorte organic-West, se realiza la misma grafica avg price vs total volume filtrando solo este cohorte y se observa que los picos son mas pronunciados en este cohorte en particular
+Luego del análisis de sensibilidad y las conclusiones encontradas respecto a la alta sensibilidad en la cohorte organic-West, se realiza la misma gráfica avg price vs total volume filtrando solo este cohorte y se observa que los picos son más pronunciados en este cohorte en particular
 
 ### Analisis de Cohortes
 
-Los cohortes que tomaremos para el analisis del retention rate son los mismos que utilizaremos para las predicciones dados las diferencias en ordenes de magnitud de organicos y convencionales en volumen.
+Las cohortes que tomaremos para el análisis del retention rate son los mismos que utilizaremos para las predicciones dados las diferencias en ordenes de magnitud de organicos y convencionales en volumen.
 Entonces seran type-region
 
 ![retention-rate-greater-region](figures/retention-type-region.png)
 
-En funcion a lo observado aqui, hacemos el mismo analisis filtrando ahora por ciudades para ver en que ciudades hay un boom de ventas de aguacate organico en la region NorthEast. Siendo el retention rate 8, es decir las ventas iniciales en 2015, fueron 8 veces mas altas al final del periodo.
+En función a lo observado aquí, hacemos el mismo análisis filtrando ahora por ciudades para ver en que ciudades hay un boom de ventas de aguacate orgánico en la region NorthEast. Siendo el retention rate 8, es decir las ventas iniciales en 2015, fueron 8 veces más altas al final del periodo.
 
 ![retention-rate-greater-city](figures/retention-per-city.png)
 
-No tenemos la composicion exacta de cada greater region en ciudades, pero podemos observar que 5 de los 10 cohortes que tuvieron tasa de retencion mas alta son correspondientes a ciudades que son geograficamente de la greater region "NorthEast". Estas son: Boston, New York, Philadelphia, Pittsburg, Syracuse. Siendo la mas importante en terminos de retention rate Boston.
+No tenemos la composición exacta de cada greater region en ciudades, pero podemos observar que 5 de las 10 cohortes que tuvieron tasa de retención más alta son correspondientes a ciudades que son geográficamente de la greater region "NorthEast". Estas son: Boston, New York, Philadelphia, Pittsburg, Syracuse. Siendo la mas importante en términos de retention rate Boston.
 
 
 ## Analisis de Regresión
 
-Analizando los ordenes de magnitud los volumenes de ventas de los aguacates organicos son muy inferiores a los del convencional, es por esto que se trabajo unicamente con la evolucion de precios del convencional
+Analizando los órdenes de magnitud los volúmenes de ventas de los aguacates orgánicos son muy inferiores a los del convencional, es por esto que se trabajó únicamente con la evolución de precios del convencional
 
 ![Alt text](figures/ordenes-de-magnitud-de-volumen.png)
 
@@ -236,7 +236,7 @@ Analizando los ordenes de magnitud los volumenes de ventas de los aguacates orga
 
 ## Predicción mensual
 
-Hemos usado una libreria opensource: [Nixtla/statsforecast](https://github.com/Nixtla/statsforecast) para realizar predicciones mensuales del dataset avocado.csv. 
+Hemos usado una librería opensource: [Nixtla/statsforecast](https://github.com/Nixtla/statsforecast) para realizar predicciones mensuales del dataset avocado.csv. 
 Haciendo uso del modelo ARIMA (AutoRegressive Integrating MovingAverages) para predecir la variable **Total_Volume** para diferentes series agrupadas por tipo de aguacate (orgánico/convencional) y para regiones agrupadas:
 
 ![Alt text](figures/531.png)
@@ -261,14 +261,14 @@ Lo que pudimos observar es que no hay gran diferencia para un modelo de regiones
 
 ### Test con variable Exógena
 
-En una predicción de series temporales pueden usarse variables exógenas como el clima, indicadores económicos, o eventos externos para ayudar a identificar tendencias de la variable a predecir. A continuación haremos un test en nuestras prediciones de la variable **Total_Volume**, esta vez usaremos la variable **AveragePrice** como variable exógena. Haremos predicciones de 15 meses a partir de 2017.02 (lo que incluye una región problemática por la variación de producción de aguacates por causas climáticas y otras varias). Este es un ejercicio teórico, ya que las variables exógenas también deben estar disponibles como predicción a futuro. Sería difícil predecir el precio del aguacate. Sin embargo, el precio si que podría estar ligado a su vez a otras variables exógenas típicas como lo son el clima, los indicadores económicos, etc (que tipicamente pueden encontrarse predicciones acertadas a cortos tiempos, por ejemplo ventana de semanas o máx. tres meses).
+En una predicción de series temporales pueden usarse variables exógenas como el clima, indicadores económicos, o eventos externos para ayudar a identificar tendencias de la variable a predecir. A continuación, haremos un test en nuestras predicciones de la variable **Total_Volume**, esta vez usaremos la variable **AveragePrice** como variable exógena. Haremos predicciones de 15 meses a partir de 2017.02 (lo que incluye una región problemática por la variación de producción de aguacates por causas climáticas y otras varias). Este es un ejercicio teórico, ya que las variables exógenas también deben estar disponibles como predicción a futuro. Sería difícil predecir el precio del aguacate. Sin embargo, el precio si que podría estar ligado a su vez a otras variables exógenas típicas como lo son el clima, los indicadores económicos, etc (que tipicamente pueden encontrarse predicciones acertadas a cortos tiempos, por ejemplo, ventana de semanas o máx. tres meses).
 ### Predicción sin variable exógena:
 ![Alt text](figures/531_sinE.png)
 
 ### Predicción con variable exógena:
 ![Alt text](figures/531-conE.png)
 
-Las diferencias gráficas son sutiles, pero se onbservan algunas predicciones más cercanas a los valores reales. En la siguiente tabla se hace evidente la mejora en la predicción del modelo, sobre todo para el aguacate convencional.
+Las diferencias gráficas son sutiles, pero se observan algunas predicciones más cercanas a los valores reales. En la siguiente tabla se hace evidente la mejora en la predicción del modelo, sobre todo para el aguacate convencional.
 
 | Error MAPE| Valor [%] | 
 |----------|----------|
