@@ -191,7 +191,7 @@ Sin embargo, la elasticidad volumen contra precio muestra que aguacates organico
 
 ![Elasticidad Volumen vs Precio](figures/ElasticidadcompOrgvsConv-GreaterRegion.png)
 
-A continuación mostramos la elasticidad segmentado por tipos de aguacate y región.
+A continuación mostramos la elasticidad segmentado por tipos de aguacate y región. Se ve que a pesar de que el aguacate convencional en conjunto es mas elastico que el agucate organico, si el analisis lo realizamos por greaterregion el cohorte con mayor sensibilidad es uncohorte de aguacates organicos, en particular organic-West.
 
 ![Elasticidad Volumen vs Precio](figures/ElasticidadcompOrgvsConv-GreaterRegionUID.png)
 
